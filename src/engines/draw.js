@@ -6,6 +6,9 @@ class DrawEngine {
 
   drawText({ text, x, y, color = '#000000', fontSize = 14, textAlign = 'center', fontName = 'monospace' }) {}
   drawSprite({ sprite, x, y, width, height }) {}
+  drawPatternRect({ image, x, y, width, height, repetition = 'repeat' }) {}
+  rotate({ x = 0, y = 0, angle = 0 }) {}
+  reset() {}
   clear() {}
 }
 
@@ -44,6 +47,14 @@ class CanvasDrawEngine extends DrawEngine {
     this._context.fillRect(0, 0, width, height)
     this._context.fillStyle = prevFillStyle
     this._context.restore()
+  }
+
+  rotate({ x = 0, y = 0, angle = 0 }) {
+    this._context.translate(x, y)
+    this._context.rotate(angle)
+  }
+  reset() {
+    this._context.resetTransform()
   }
 
   clear() {

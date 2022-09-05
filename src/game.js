@@ -97,6 +97,7 @@ class Game {
       width: this._config.bird.width,
       height: this._config.bird.height,
       flapSpeed: this._config.bird.flapSpeed,
+      rotationSpeed: this._config.bird.rotationSpeed,
       animationSpeed: this._config.bird.animationSpeed,
       frames: this._config.resources.entries.bird,
       spriteSheet: this._resources.get('spriteSheet'),

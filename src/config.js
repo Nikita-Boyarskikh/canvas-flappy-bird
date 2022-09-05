@@ -20,6 +20,7 @@ class Config {
   bird = {
     startX: 50,
     flapSpeed: 300,
+    rotationSpeed: 25,
     width: 34,
     height: 26,
     animationSpeed: 0.5,
